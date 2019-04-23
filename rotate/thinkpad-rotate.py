@@ -56,7 +56,7 @@ env = environ.copy()
 
 devices = check_output(['xinput', '--list', '--name-only'],env=env).splitlines()
 
-touchscreen_names = ['touchscreen', 'touch digitizer']
+touchscreen_names = ['touchscreen', 'touch digitizer', 'multitouch']
 touchscreens = [i for i in devices if any(j in i.lower() for j in touchscreen_names)]
 
 wacoms = [i for i in devices if any(j in i.lower() for j in ['wacom'])]
